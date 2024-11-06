@@ -13,23 +13,23 @@ This repository contains a client-server application with a React frontend and E
 
 ## Installation and Setup
 
-**Start the Docker containers:**:
-  docker-compose up --build
+**Start the Docker containers:**
+  - `docker-compose up --build`
 
 **Access the application**:
-  Frontend: http://localhost:3030
-  Backend: http://localhost:5050
+  - Frontend: http://localhost:3030
+  - Backend: http://localhost:5050
 
 ## Stopping the Application
-  docker-compose down
+  - `docker-compose down`
 
 ## To run app without docker
   ### Running the Server
   - Navigate to the server-app directory
-  - npm install
-  - npm run dev
+  - `npm install`
+  - `npm run dev`
 
   ### Running the Client
   - Navigate to the client-app directory
-  - npm install
-  - npm start
+  - `npm install`
+  - `npm start`
