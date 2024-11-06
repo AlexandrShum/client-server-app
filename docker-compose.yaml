@@ -1,0 +1,38 @@
+version: "3"
+services:
+  server-app:
+    build: ./server-app
+    container_name: server-app
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./server-app:/app
+      - /app/node_modules
+
+  client-app:
+    build: ./client-app
+    container_name: client-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client-app:/app
+      - /app/node_modules
+    stdin_open: true
+    tty: true
+
+  mysql-db:
+    image: mysql:8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: my_database
+      MYSQL_USER: my_user
+      MYSQL_PASSWORD: my_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./db:/docker-entrypoint-initdb.d
+
+volumes:
+  mysql_data:
