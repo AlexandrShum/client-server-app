@@ -4,7 +4,7 @@ services:
     build: ./server-app
     container_name: server-app
     ports:
-      - "5000:5000"
+      - "5050:5000"
     volumes:
       - ./server-app:/app
       - /app/node_modules
@@ -13,7 +13,7 @@ services:
     build: ./client-app
     container_name: client-app
     ports:
-      - "3000:3000"
+      - "3030:3000"
     volumes:
       - ./client-app:/app
       - /app/node_modules

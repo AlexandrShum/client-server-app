@@ -11,7 +11,7 @@ function App() {
   const [isModalOpen, setModalOpen] = useState<boolean>(false);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/orders").then(response => setData(response.data)).catch(err => console.error(err.message))
+    axios.get("http://localhost:5050/orders").then(response => setData(response.data)).catch(err => console.error(err.message))
   }, []);
 
   const handlePushDataButtonClick = (clientName: string, orders: string[]) => {
@@ -20,7 +20,7 @@ function App() {
       orders
     }
 
-    axios.post("http://localhost:5000/orders", { ...dataToPush })
+    axios.post("http://localhost:5050/orders", { ...dataToPush })
       .then(response => {
         if (response.status === 201) {
           setData(response.data.orders);

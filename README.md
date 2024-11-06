@@ -1,11 +1,35 @@
-## command to create docker image 
-  docker build -t server-api .
+# Client-Server App
 
-## command to start docker container
-  docker run --name test-api-container -p 5005:5000 server-api
+This repository contains a client-server application with a React frontend and Express.js backend, configured to run with Docker.
 
-## remove conainer
-  docker rm [container-name]
+## Structure
+  - client-app: React frontend application
+  - server-app: Express backend server
+  - db: Database configuration
+  - docker-compose.yaml: Docker Compose configuration for the entire app
 
-## remove image
-  docker rmi [image-name]
+## Prerequisites
+  - Docker and Docker Compose installed
+
+## Installation and Setup
+
+**Start the Docker containers:**:
+  docker-compose up --build
+
+**Access the application**:
+  Frontend: http://localhost:3030
+  Backend: http://localhost:5050
+
+## Stopping the Application
+  docker-compose down
+
+## To run app without docker
+  ### Running the Server
+  - Navigate to the server-app directory
+  - npm install
+  - npm run dev
+
+  ### Running the Client
+  - Navigate to the client-app directory
+  - npm install
+  - npm start
