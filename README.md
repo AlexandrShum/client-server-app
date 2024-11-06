@@ -14,6 +14,7 @@ This repository contains a client-server application with a React frontend and E
 ## Installation and Setup
 
 **Start the Docker containers:**
+  - run `npm install` in `client-app` and `server-app` folders for better performance
   - `docker-compose up --build`
 
 **Access the application**:
